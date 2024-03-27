@@ -21,6 +21,10 @@ class AppTheme {
           'Seleccionar un color menor o igual a ${colorList.length - 1}',
         );
 
-  ThemeData getTheme() =>
-      ThemeData(useMaterial3: true, colorSchemeSeed: colorList[selectedColor]);
+  ThemeData getTheme() => ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: colorList[selectedColor],
+        //de manera global estilizar lo apps bars
+        appBarTheme: const AppBarTheme(centerTitle: true),
+      );
 }

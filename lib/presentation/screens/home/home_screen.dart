@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_app/buttons/buttons_screen.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
+import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
+  //!se define un nombre para cada pantalla para usar con goRoute.
+  static const String name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -63,6 +66,10 @@ class _CustomListTile extends StatelessWidget {
         color: colors.primary,
       ),
       onTap: () {
+        //? se listan las formas de usar, por nombre, link
+        // context.pushNamed(CardsScreen.name);
+        context.push(menuItem.link);
+
         //!El context es el arbol de widgets
         //!el push sobrepone una pantalla sobre otra y el pop vuelve a la anterior
         //?Es una de las formas de 'navegar en flutter'
@@ -70,8 +77,7 @@ class _CustomListTile extends StatelessWidget {
         //     MaterialPageRoute(builder: (context) => const ButtonsScreen()));
 
         //? la siguiente config es con nombre de ruta, no es recomendable pero hay que conocer
-
-        Navigator.pushNamed(context, menuItem.link);
+        // Navigator.pushNamed(context, menuItem.link);
       },
       //?El splashColor es para darle color cuando se pasa el cursor sobre el listTile
       //splashColor: colors.primary,

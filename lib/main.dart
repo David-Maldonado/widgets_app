@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_app/buttons/buttons_screen.dart';
-import 'package:widgets_app/cards/cards_screen.dart';
+import 'package:widgets_app/config/router/app_router.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
-import 'package:widgets_app/presentation/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,15 +10,17 @@ class MainApp extends StatelessWidget {
   const MainApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme(selectedColor: 5).getTheme(),
-        home: const HomeScreen(),
-        routes: {
-          '/buttons': (context) => const ButtonsScreen(),
-          '/cards': (context) => const CardsScreen()
-        },
-        
-        );
+    return MaterialApp.router(
+      routerConfig: router,
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme(selectedColor: 5).getTheme(),
+
+      //!lo comentado es una forma de configurar rutas, comentado anteriormente
+      //!pero lo recomendable es usar go_route
+      // routes: {
+      //   '/buttons': (context) => const ButtonsScreen(),
+      //   '/cards': (context) => const CardsScreen()
+      // },
+    );
   }
 }

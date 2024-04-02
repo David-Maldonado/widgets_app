@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/buttons/buttons_screen.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -62,7 +63,15 @@ class _CustomListTile extends StatelessWidget {
         color: colors.primary,
       ),
       onTap: () {
-        //TODO: navegar a otro pantalla.
+        //!El context es el arbol de widgets
+        //!el push sobrepone una pantalla sobre otra y el pop vuelve a la anterior
+        //?Es una de las formas de 'navegar en flutter'
+        // Navigator.of(context).push(
+        //     MaterialPageRoute(builder: (context) => const ButtonsScreen()));
+
+        //? la siguiente config es con nombre de ruta, no es recomendable pero hay que conocer
+
+        Navigator.pushNamed(context, menuItem.link);
       },
       //?El splashColor es para darle color cuando se pasa el cursor sobre el listTile
       //splashColor: colors.primary,

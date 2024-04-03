@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 5).getTheme(),
+      theme: AppTheme(selectedColor: 2).getTheme(),
 
       //!lo comentado es una forma de configurar rutas, comentado anteriormente
       //!pero lo recomendable es usar go_route

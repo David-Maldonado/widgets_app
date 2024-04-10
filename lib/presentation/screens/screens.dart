@@ -1,3 +1,4 @@
+export 'package:widgets_app/presentation/screens/infinite_scroll/progress/progress_sreen.dart';
 export 'package:flutter/material.dart';
 export 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 export 'package:widgets_app/presentation/screens/app_tutoral/app_tutorial_screen.dart';
@@ -6,3 +7,4 @@ export 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 export 'package:widgets_app/presentation/screens/home/home_screen.dart';
 export 'package:widgets_app/presentation/screens/infinite_scroll/inifite_scroll_screen.dart';
 export 'package:widgets_app/presentation/screens/ui_control/ui_control_screen.dart';
+export 'package:widgets_app/presentation/screens/snack_bar/snack_bar_screen.dart';

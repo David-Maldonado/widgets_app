@@ -1,5 +1,4 @@
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/screens/infinite_scroll/progress/progress_sreen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
 
 final router = GoRouter(
@@ -24,4 +23,8 @@ final router = GoRouter(
           path: '/progress',
           builder: (context, state) => const ProgressScreen(),
           name: ProgressScreen.name),
+      GoRoute(
+          path: '/snackbars',
+          builder: (context, state) => const SnackBarScreen(),
+          name: SnackBarScreen.name),
     ]);

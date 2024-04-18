@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
 import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   //!se define un nombre para cada pantalla para usar con goRoute.
@@ -10,12 +11,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter + Material 3'),
-      ),
-      body: const _HomeView(),
-    );
+        //!el scaffoldKey tiene el estado actual del scaffold, si tiene el draw o no abierto, si tiene menu
+        //!tiene la referencia de lo que pasa en el
+        key: scaffoldKey,
+        appBar: AppBar(
+          title: const Text('Flutter + Material 3'),
+        ),
+        body: const _HomeView(),
+        drawer: SideMenu(scaffoldKey: scaffoldKey));
   }
 }
 //!el key es si se va a usar el widget en otro lugar, a _HomeView le quitamos porque

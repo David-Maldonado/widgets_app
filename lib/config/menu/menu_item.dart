@@ -54,4 +54,14 @@ const appMenuItem = <MenuItem>[
       subTitle: 'Listas infinitas y pull to refesh',
       link: '/inifite-scroll',
       icon: Icons.remove_from_queue_sharp),
+  MenuItem(
+      title: 'Counter',
+      subTitle: 'Contador de números simple',
+      link: '/counter',
+      icon: Icons.numbers),
+  MenuItem(
+      title: 'Theme changer',
+      subTitle: 'Cambiar tema de la app',
+      link: '/theme-changer',
+      icon: Icons.color_lens_outlined),
 ];

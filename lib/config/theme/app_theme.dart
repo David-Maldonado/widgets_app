@@ -11,7 +11,8 @@ const colorList = <Color>[
 
 class AppTheme {
   final int selectedColor;
-  AppTheme({this.selectedColor = 0})
+  final bool isDarkMode;
+  AppTheme({this.isDarkMode = false, this.selectedColor = 0})
       : assert(
           selectedColor >= 0,
           'Seleccionar un color mayor a 0',
@@ -23,6 +24,7 @@ class AppTheme {
 
   ThemeData getTheme() => ThemeData(
         useMaterial3: true,
+        brightness: isDarkMode ? Brightness.dark : Brightness.light,
         colorSchemeSeed: colorList[selectedColor],
         //de manera global estilizar lo apps bars
         appBarTheme: const AppBarTheme(centerTitle: true),

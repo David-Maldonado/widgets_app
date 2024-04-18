@@ -1,8 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
+// ignore: depend_on_referenced_packages
 import 'package:go_router/go_router.dart';
+// ignore: depend_on_referenced_packages
 import 'package:animate_do/animate_do.dart';
 
 class InfiniteScrollScreen extends StatefulWidget {
